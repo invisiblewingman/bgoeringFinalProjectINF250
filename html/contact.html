@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Contact Us</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <h1><a href="index.html">INF250 News</a></h1>
+</head>
+
+<body>
+<header>
+	<nav>
+		<a href="index.html">Home</a>
+        <a href="news.html">News</a>
+        <a href="sports.html">Sports</a>
+        <a href="weather.html">Weather</a>
+	</nav>
+</header>
+
+<main id="indexmain">
+    <form class="grid-container" action="​https://rest-api-ex.herokuapp.com/all" method="post"></form>
+    <h2>Contact us by filling out the fields below&colon;</h2>
+    <p>Your name&colon; <input type="text" required><br>
+        <br>Your email&colon; <input type="email" id="guestemail" autofocus required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"><br><br>
+        Message: &colon;<textarea id="message" placeholder="Let us know what you think of the website." required>
+            <br><br>
+            
+            <button onclick="checksubmit()">  
+                Submit
+            </button>  
+    </p>
+</main>
+<footer>
+	<p>Blade Goering &copy; <span id="year"></span>  
+</footer>
+<script type="text/javascript" src="js/main.js"></script> 
+<script>  
+    function checksubmit() {  
+        var em = document.getElementById("guestemail").pattern; 
+        document.getElementById("GFG").innerHTML = em;  
+    }  
+</script>  
+</body>
+</html>
+
+
+              
